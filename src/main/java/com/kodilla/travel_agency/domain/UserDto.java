@@ -1,14 +1,16 @@
 package com.kodilla.travel_agency.domain;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 
-@AllArgsConstructor
 @Getter
+@Builder
+@AllArgsConstructor
 public class UserDto {
 
-    private String name;
-    private int id;
-    private String email;
+    private final Long id;
+    private final String name;
+    private final String email;
 
 }

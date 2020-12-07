@@ -1,16 +1,41 @@
 package com.kodilla.travel_agency.domain;
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-@Getter
-@AllArgsConstructor
+import javax.persistence.*;
+
 @NoArgsConstructor
+@AllArgsConstructor
+@Setter
+@Entity
 public class User {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
+    private Long id;
+
+    @Column(name = "name")
     private String name;
-    private int id;
+
+    @Column(name = "email")
     private String email;
 
+
+  //  @Column(name = "user_id")
+    public Long getId() {
+        return id;
+    }
+
+
+    public String getName() {
+        return name;
+    }
+
+
+    public String getEmail() {
+        return email;
+    }
 }
