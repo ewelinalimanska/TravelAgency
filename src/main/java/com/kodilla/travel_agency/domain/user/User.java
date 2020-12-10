@@ -1,4 +1,4 @@
-package com.kodilla.travel_agency.domain;
+package com.kodilla.travel_agency.domain.user;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
@@ -23,19 +23,22 @@ public class User {
     @Column(name = "email")
     private String email;
 
+    @Column(name = "city")
+    private String city;
 
-  //  @Column(name = "user_id")
     public Long getId() {
         return id;
     }
-
 
     public String getName() {
         return name;
     }
 
-
     public String getEmail() {
         return email;
+    }
+
+    public String getCity() {
+        return city;
     }
 }
